@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../logging-in/" class="md-nav__link">
+      <a href="../../connecting/ssh/" class="md-nav__link">
         
   
   
@@ -1323,7 +1323,7 @@
 <p>There are a few different ways to transfer files depending on your goals, the data you are transferring, and what you are comfortable with. On this page we cover the different methods of transferring files, as well as touch on how to transfer files between systems.</p>
 <p>We recommend using <a href="#ondemand">OnDemand</a> for every-day file transfer and <a href="#globus">Globus</a> for transferring large files or large numbers of files. For those who prefer to use the command line you can use <a href="#command-line">scp or rsync</a>.</p>
 <h2 id="ondemand">OnDemand<a class="headerlink" href="#ondemand" title="Permanent link">&para;</a></h2>
-<p>AICR has an <a href="REPLACE URL HERE">Open OnDemand Portal</a>.</p>
+<p>AICR has an <a href="https://ood.aicr.ai">Open OnDemand Portal</a>.</p>
 <p>With the AICR OnDemand portal you can do the following using the File Browser:</p>
 <ul>
 <li>Upload and download files and directories</li>
@@ -1331,8 +1331,6 @@
 <li>View and edit files</li>
 </ul>
 <p>Once you are logged into OnDemand, you can use the File Browser by selecting Files -&gt; Home Directory in the menu bar at the top left of the page.</p>
-<!-- TODO: Verify File Browser Paths -->
-
 <p>To upload and download you can drag and drop files and directories between your File Browser window and your desktop Finder/Explorer windows. You can also use the "Upload" and "Download" buttons. Select multiple files by holding the Control (or Command) key and clicking on the files you'd like to select. Those files can then be downloaded with the "Download" button.</p>
 <h3 id="viewing-and-editing-files">Viewing and Editing Files<a class="headerlink" href="#viewing-and-editing-files" title="Permanent link">&para;</a></h3>
 <p>The File Browser is also the easiest way to view and edit files in place. Click on the file that you would like to view or edit. Then click either the "View" or "Edit" buttons directly above the list of files.</p>
@@ -1345,8 +1343,13 @@
 <li>You don't need to stay logged into Globus through the entire transfer</li>
 <li>If your transfer is interrupted it will continue automatically where it left off once the connection is re-established</li>
 </ul>
-<p>The AICR collection on Globus is called <a href="REPLACE URL HERE">AICR Collection</a>. Below is a table listing the collections for a few institution's home cluster.</p>
+<p>The AICR collection on Globus is called AICR Collection.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The AICR Globus collection is not yet set up. When it is set up we will update this page.</p>
+</div>
 <!-- TODO: Replace Globus URL and add table
+ Below is a table listing the collections for a few institution's home cluster.
 
 | Institution  | Cluster | Globus Collection | 
 | ----------- | ----------- |----------- |
@@ -1358,7 +1361,7 @@
 <p>To transfer data:</p>
 <ol>
 <li><strong>Log in:</strong> Log into <a href="https://www.globus.org/">Globus</a> with your institution's credentials. These should be the same that you use to log into <a href="https://ood.aicr.ai">ood.aicr.ai</a>.</li>
-<li><strong>Select your source and destination collections:</strong> In the "File Manager" tab in each of the two "Collection" boxes search for the collections for the systems you want to transfer data between (<a href="REPLACE URL">AICR Collection</a> for ACIR). To transfer data to or from your own computer you will need to set up Globus Connect Personal. Follow the instructions on the page for your system listed <a href="https://docs.globus.org/globus-connect-personal/">here</a>.</li>
+<li><strong>Select your source and destination collections:</strong> In the "File Manager" tab in each of the two "Collection" boxes search for the collections for the systems you want to transfer data between (AICR Collection for AICR). To transfer data to or from your own computer you will need to set up Globus Connect Personal. Follow the instructions on the page for your system listed <a href="https://docs.globus.org/globus-connect-personal/">here</a>.</li>
 <li><strong>Navigate to your source and destination directories:</strong> On the source side navigate to the source directory and select the files and/or directories you'd like to transfer. On the destination side navigate to the location where you'd like to copy your files</li>
 <li><strong>Select any additional settings:</strong> Click on "Transfer and Timer Options" for additional settings, such as syncing new or changed files and scheduling recurring transfers.</li>
 <li><strong>Initiate the transfer:</strong> Once you have selected the files and options you want, press the "Start" button on the source column.</li>
@@ -1379,10 +1382,10 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cp<span class="w"> </span>/path/to/source<span class="w"> </span>/path/to/destination
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># using scp to copy files from the local system to AICR</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>scp<span class="w"> </span>/path/to/source<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:/path/to/destination
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>scp<span class="w"> </span>/path/to/source<span class="w"> </span>USERNAME@login.aicr.ai:/path/to/destination
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># using scp to copy files from AICR to the local system</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>scp<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:/path/to/source<span class="w"> </span>/path/to/destination
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>scp<span class="w"> </span>USERNAME@login.aicr.ai:/path/to/source<span class="w"> </span>/path/to/destination
 </span></code></pre></div>
 <p>Unless you have your paths memorized, the easiest way to do this is to have two terminals open. The first terminal is logged into AICR or other remote system, the second is on your local computer. In each navigate to the respective source and destination directories. In the AICR tab you can run the <code>pwd</code> command to print out the path to your current location and copy the output to use in the <code>scp</code> or <code>rsync</code> command.</p>
 <h3 id="scp">scp<a class="headerlink" href="#scp" title="Permanent link">&para;</a></h3>
@@ -1390,20 +1393,20 @@
 <p>To transfer a file from your local computer to AICR you would use the command:</p>
 <!-- TODO: Replace AICR DTN hostname -->
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>scp<span class="w"> </span>&lt;local-file-name&gt;<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:&lt;path-to-aicr-dir&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>scp<span class="w"> </span>&lt;local-file-name&gt;<span class="w"> </span>USERNAME@login.aicr.ai:&lt;path-to-aicr-dir&gt;
 </span></code></pre></div>
 <p>For example, let's say you have the local file <code>myscript.py</code> and you want to transfer it to the directory <code>mycode</code> in your home directory. The command would be:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>scp<span class="w"> </span>myscript.py<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:/home/USERNAME/mycode/
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>scp<span class="w"> </span>myscript.py<span class="w"> </span>USERNAME@login.aicr.ai:/home/USERNAME/mycode/
 </span></code></pre></div>
 <p>To transfer the other direction (from AICR to your local computer) switch the order:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>scp<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:&lt;path-to-aicr-file&gt;<span class="w"> </span>&lt;path-to-local-dir&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>scp<span class="w"> </span>USERNAME@login.aicr.ai:&lt;path-to-aicr-file&gt;<span class="w"> </span>&lt;path-to-local-dir&gt;
 </span></code></pre></div>
 <p>If you were to have the file <code>results.csv</code> that you want to copy from the <code>output</code> directory in your remote home directory to the current directory on your computer the command would be:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>scp<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:/home/USERNAME/output/results.csv<span class="w"> </span>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>scp<span class="w"> </span>USERNAME@login.aicr.ai:/home/USERNAME/output/results.csv<span class="w"> </span>.
 </span></code></pre></div>
 <p>Note the <code>.</code> in the command above means the current directory.</p>
 <p>Similar to the <code>cp</code> command, if you want to transfer an entire directory and all of its subdirectories, use the <code>-r</code> (recursive) flag for either direction:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>&lt;local-directory-name&gt;<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:&lt;path-to-aicr-dir&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>&lt;local-directory-name&gt;<span class="w"> </span>USERNAME@login.aicr.ai:&lt;path-to-aicr-dir&gt;
 </span></code></pre></div>
 <!-- TODO: Check 2FA behavior with AICR DTN -->
 
@@ -1436,7 +1439,7 @@ authenticate with Duo. You may get a Duo push without any indication from the co
 <!-- TODO: Replace DTN hostname -->
 
 <p><div class="language-bash highlight"><span class="filename">Transferring files from MIT Engaging to AICR</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh<span class="w"> </span>USERNAME@orcd-login.mit.edu
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>scp<span class="w"> </span>&lt;path-to-Engaging-file&gt;<span class="w"> </span>USERNAME@<span class="o">[</span>dtn-hostname<span class="o">]</span>:&lt;path-to-engaging-directory&gt;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>scp<span class="w"> </span>&lt;path-to-Engaging-file&gt;<span class="w"> </span>USERNAME@login.aicr.ai:&lt;path-to-AICR-directory&gt;
 </span></code></pre></div>
 You can also <code>ssh</code> into AICR and initiate the transfer from there using a similar command.</p>
 <h2 id="graphical-applications-for-file-transfer">Graphical Applications for File Transfer<a class="headerlink" href="#graphical-applications-for-file-transfer" title="Permanent link">&para;</a></h2>
@@ -1449,7 +1452,7 @@ You can also <code>ssh</code> into AICR and initiate the transfer from there usi
 </ul>
 <!-- TODO: Replace DTN hostname -->
 
-<p>To use these you will need to use the hostname of the AICR data transfer nodes: <code>[dtn-hostname]</code>.</p>
+<p>To use these you will need to use the hostname of the AICR data transfer nodes: <code>login.aicr.ai</code>.</p>
 
 
 
@@ -1470,7 +1473,7 @@ You can also <code>ssh</code> into AICR and initiate the transfer from there usi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 27, 2026 16:14:55 UTC">May 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 1, 2026 19:29:23 UTC">June 1, 2026</span>
   </span>
 
     
