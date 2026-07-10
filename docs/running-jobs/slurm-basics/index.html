@@ -1544,16 +1544,16 @@
 </ul>
 <h3 id="interactive-jobs">Interactive Jobs<a class="headerlink" href="#interactive-jobs" title="Permanent link">&para;</a></h3>
 <p>The basic command for requesting an interactive job on the <code>rtx-devel</code> partition is:</p>
-<div class="language-batch highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>salloc --partition=rtx-devel --gpus=1 --cpus-per-task=4 --mem=16G --time=01:00:00 --qos=interactive
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>salloc --partition=rtx-devel --gpus=1 --cpus-per-task=4 --mem=16G --time=01:00:00
 </span></code></pre></div>
 <!-- TODO: Check that this qos works -->
 
-<p>The <code>--partition=rtx-devel</code> is a flag that is passed to the scheduler, <code>--partition</code> specifies the partition. This command will allocate 4 cores (<code>--cpus-per-task</code>), one GPU (<code>--gpus</code>), and 16GB of RAM (<code>--mem</code>) on a node in the <code>rtx-devel</code> partition for one hour. The <code>--qos</code> flag specifies that this is an interactive job. Since this is the <code>rtx-devel</code> you will get an RTX Pro 6000 GPU.</p>
+<p>The <code>--partition=rtx-devel</code> is a flag that is passed to the scheduler, <code>--partition</code> specifies the partition. This command will allocate 4 cores (<code>--cpus-per-task</code>), one GPU (<code>--gpus</code>), and 16GB of RAM (<code>--mem</code>) on a node in the <code>rtx-devel</code> partition for one hour. Since this is the <code>rtx-devel</code> you will get an RTX Pro 6000 GPU.</p>
 <p>We set aside a certain number of nodes specifically for interactive jobs in each of the "devel" partitions.</p>
 <p>For example:</p>
 <!-- TODO: Replace with AICR example -->
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">[</span>user01@login0001<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>rtx-devel<span class="w"> </span>--gpus<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">4</span><span class="w"> </span>--mem<span class="o">=</span>16G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--qos<span class="o">=</span>interactive
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">[</span>user01@login0001<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>rtx-devel<span class="w"> </span>--gpus<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">4</span><span class="w"> </span>--mem<span class="o">=</span>16G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>salloc:<span class="w"> </span>Pending<span class="w"> </span>job<span class="w"> </span>allocation<span class="w"> </span><span class="m">60159437</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">60159437</span><span class="w"> </span>queued<span class="w"> </span>and<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>resources
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>salloc:<span class="w"> </span>job<span class="w"> </span><span class="m">60159437</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>allocated<span class="w"> </span>resources
@@ -1831,7 +1831,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 1, 2026 19:29:23 UTC">June 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 10, 2026 17:55:47 UTC">July 10, 2026</span>
   </span>
 
     
